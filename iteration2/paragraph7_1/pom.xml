@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ru.itfb</groupId>
+    <artifactId>iteration2</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>paragraph7_1</artifactId>
+  <name>Пункт 7.1</name>
+  <url>http://maven.apache.org</url>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <version>0.44.0</version>
+        <configuration>
+          <images>
+            <image>
+              <alias>nginx_servcie</alias>
+              <name>nginx:alpine</name>
+              <run>
+                <ports>
+                  <port>80:80</port>
+                </ports>
+                <volumes>
+                  <bind>
+                    <volume>${project.basedir}/html/:/usr/share/nginx/html:ro</volume>
+                  </bind>
+                </volumes>
+              </run>
+            </image>
+          </images>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
