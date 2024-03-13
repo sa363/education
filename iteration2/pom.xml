@@ -13,6 +13,8 @@
     <modules>
         <module>paragraph7_2</module>
         <module>paragraph7_1</module>
+        <module>algorithms</module>
+        <module>baseJavaConcept</module>
     </modules>
     <dependencyManagement>
         <dependencies>
