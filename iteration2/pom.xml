@@ -15,6 +15,7 @@
         <module>paragraph7_1</module>
         <module>algorithms</module>
         <module>baseJavaConcept</module>
+        <module>jvm</module>
     </modules>
     <dependencyManagement>
         <dependencies>

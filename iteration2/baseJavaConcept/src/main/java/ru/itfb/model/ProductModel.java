@@ -5,14 +5,14 @@ import lombok.Setter;
 import ru.itfb.data.DataModel;
 
 import java.util.Date;
+import java.util.logging.Logger;
 
 @Getter
 @Setter
-public class ProductModel implements DataModel {
-    @Setter
+public class ProductModel extends  BaseModel implements DataModel {
+
     private String id;
-    private String name;
-    @Setter
+
     private Date creationDate;
     @Setter
     private String externalCode;
@@ -23,13 +23,13 @@ public class ProductModel implements DataModel {
 
     public ProductModel(String id, String name) {
         this.id = id;
-        this.name = name;
+        this.setName(name);
         this.current = true; // По умолчанию объект актуален при создании
     }
 
     @Override
     public void save() {
-
+       Logger.getGlobal().info("Product %s saved".formatted(this.getName()));
     }
 
     @Override
