@@ -16,6 +16,7 @@
         <module>algorithms</module>
         <module>baseJavaConcept</module>
         <module>jvm</module>
+        <module>objectHashCodeAndEquals</module>
     </modules>
     <dependencyManagement>
         <dependencies>
