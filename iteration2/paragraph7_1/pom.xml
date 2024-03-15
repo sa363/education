@@ -19,7 +19,7 @@
         <configuration>
           <images>
             <image>
-              <alias>nginx_servcie</alias>
+              <alias>nginx_service</alias>
               <name>nginx:alpine</name>
               <run>
                 <ports>
