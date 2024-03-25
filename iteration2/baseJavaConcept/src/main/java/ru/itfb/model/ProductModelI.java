@@ -2,14 +2,14 @@ package ru.itfb.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.itfb.data.DataModel;
+import ru.itfb.data.IDataModel;
 
 import java.util.Date;
 import java.util.logging.Logger;
 
 @Getter
 @Setter
-public class ProductModel extends  BaseModel implements DataModel {
+public class ProductModelI extends  BaseModel implements IDataModel {
 
     private String id;
 
@@ -21,7 +21,7 @@ public class ProductModel extends  BaseModel implements DataModel {
     @Setter
     private boolean current;
 
-    public ProductModel(String id, String name) {
+    public ProductModelI(String id, String name) {
         this.id = id;
         this.setName(name);
         this.current = true; // По умолчанию объект актуален при создании

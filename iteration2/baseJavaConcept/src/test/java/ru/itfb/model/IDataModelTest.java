@@ -6,8 +6,8 @@ import org.junit.platform.commons.logging.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class DataModelTest {
-    Logger logger = LoggerFactory.getLogger(DataModelTest.class);
+class IDataModelTest {
+    Logger logger = LoggerFactory.getLogger(IDataModelTest.class);
 
 
     @Test
@@ -22,7 +22,7 @@ class DataModelTest {
 
     @Test
     public void testProductIsCurrent() {
-        ProductModel product1 = new ProductModel("P001", "Phone");
+        ProductModelI product1 = new ProductModelI("P001", "Phone");
         assertEquals(true, product1.isCurrent());
         product1.save();
 
@@ -36,7 +36,7 @@ class DataModelTest {
         assertEquals(2L, (Long) user2.getId());
         logger.info(()->user2.getId().getClass().toString());
 
-        ProductModel product2= new ProductModel("P002", "Laptop");
+        ProductModelI product2= new ProductModelI("P002", "Laptop");
         assertEquals("P002", (String)product2.getId());
     }
 

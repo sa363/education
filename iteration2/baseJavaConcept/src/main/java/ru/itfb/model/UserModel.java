@@ -2,14 +2,14 @@ package ru.itfb.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.itfb.data.DataModel;
+import ru.itfb.data.IDataModel;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 @Getter
 @Setter
-public class UserModel implements DataModel {
+public class UserModel implements IDataModel {
 
     public UserModel(Long id, String name) {
         this.id = id;

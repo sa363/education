@@ -2,16 +2,14 @@ package ru.itfb.data;
 
 import java.util.Date;
 
-public interface DataModel {
+public interface IDataModel<T> {
     void save();
     void update();
     void delete();
-
-    Object getId();
+    T getId();
     Date getCreationDate();
     String getExternalCode();
     boolean isImmutable();
-
     Date getLastModifiedDate();
     int getNumberOfModifications();
     int getOrderNumber();

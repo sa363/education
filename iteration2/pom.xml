@@ -17,6 +17,7 @@
         <module>baseJavaConcept</module>
         <module>jvm</module>
         <module>objectHashCodeAndEquals</module>
+        <module>testconteiners</module>
     </modules>
     <dependencyManagement>
         <dependencies>

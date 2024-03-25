@@ -7,11 +7,6 @@ public class Algorithm {
 
     Logger logger = Logger.getLogger(Algorithm.class.getName());
 
-//    public static void main(String[] args) {
-//
-//    }
-
-
     // O(1) - сложность не зависит от размера входных данных
     public static boolean linearSearch(int[] array, int target) {
         for (int i = 0; i < array.length; i++) {
@@ -25,14 +20,16 @@ public class Algorithm {
 
     public static void bubbleSort(int[] array) {
         int n = array.length;
-
+        int[] temp = new int[n*n];
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
+                int k =i+j;
+
                 if (array[j] > array[j+1]) {
                     // меняем элементы местами
-                    int temp = array[j];
+                    temp[k] = array[j];
                     array[j] = array[j+1];
-                    array[j+1] = temp;
+                    array[j+1] = temp[k];
                 }
             }
         }
@@ -59,7 +56,7 @@ public class Algorithm {
 
         // Элемент не найден
         return -1;
-    }// Сложность: O(log(n)), где n - количество элементов в отсортированном массиве
+    } // Сложность: O(log(n)), где n - количество элементов в отсортированном массиве
 
 
 

@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/catalogue
+    username: catalogue
+    password: catalogue
+  flyway:
+    schemas:
+      - public
+      - sandbox
+  jpa:
+    show-sql: true
+logging:
+  level:
+    sql: info
+management:
+  endpoint:
+    health:
+      livenessstate:
+        enabled: true
+      readinessstate:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
